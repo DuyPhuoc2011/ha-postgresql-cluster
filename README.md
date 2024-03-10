@@ -4,6 +4,7 @@ This guide provides step-by-step instructions for deploying a High Availability 
 
 ## Architecture
 
+<img width="566" alt="image" src="https://github.com/DuyPhuoc2011/ha-postgresql-cluster/assets/23703707/4559b46b-7db9-44c8-acef-8b744ac6b54c">
 
 
 ## Prerequisites
@@ -18,53 +19,52 @@ Before you begin, make sure you have the following prerequisites in place:
 ## Installation
 
 1. Setup node1, node2 and node3
-Command to install softwares on nodes
 
+```shell
 ./nodes-pre-installation.sh node1
 ./nodes-pre-installation.sh node2
 ./nodes-pre-installation.sh node3
+```
 
 2. Setup etcd node
-Command to install softwares on etcd node
-
+```
 ./etcd-node-pre-installation.sh
-
+```
 3. Setup haproxy node
-Command to install softwares on haproxy node
-
+```
 ./ha-proxy-pre-installation.sh
-
+```
 4. Configure etcd on etcd node
 
-Modify file with this path "/etc/default/etcd" and add add lines in the etcd-configure file of this repository.
+  Modify file with this path "/etc/default/etcd" and add add lines in the etcd-configure file of this repository.
 
 5. Configure Patroni on node1,node2 and node3
 
-Modify file with this path "/etc/patroni.yaml" and add lines in the patroni.yaml file of this repository
-Node: Update corresponding IP address for each nodes
+  Modify file with this path "/etc/patroni.yaml" and add lines in the patroni.yaml file of this repository
+  Node: Update corresponding IP address for each nodes
 
-Initial data folder for each node:
-
+  Initial data folder for each node:
+```
 sudo mkdir -p /data/patroni
 sudo chown postgres:postgres /data/patroni
 sudo chmod 700 /data/patroni
-
+```
 Create new service file for patroni with this path "/etc/systemd/system/patroni.service"
 Add lines in the patroni.service file of this repository
 
 6. Start patroni service
-
+```
 sudo systemctl start patroni
-
-7. Congfigure haproxy
+```
+7. Configure haproxy
 
 Modify file with this path "/etc/haproxy/haproxy.cfg" and replace lines with the lines in the file haproxy.cfg of this repository
 Note: Update corresponding IP address for each nodes
 
 8. Start haproxy service
-
+```
 sudo systemctl start haproxy
-
+```
 ## Troubleshooting
 
 If you encounter any issues during the deployment or operation of the HA PostgreSQL cluster, refer to the following resources for troubleshooting:
