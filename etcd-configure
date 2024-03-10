@@ -1,0 +1,7 @@
+ETCD_LISTEN_PEER_URLS="http://<etcdnode_ip>:2380"
+ETCD_LISTEN_CLIENT_URLS="http://localhost:2379,http://<etcdnode_ip>:2379"
+ETCD_INITIAL_ADVERTISE_PEER_URLS="http://<etcdnode_ip>:2380"
+ETCD_INITIAL_CLUSTER="default=http://<etcdnode_ip>:2380,"
+ETCD_ADVERTISE_CLIENT_URLS="http://<etcdnode_ip>:2379"
+ETCD_INITIAL_CLUSTER_TOKEN="etcd-cluster"
+ETCD_INITIAL_CLUSTER_STATE="new"
