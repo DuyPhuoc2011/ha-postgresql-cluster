@@ -1,6 +1,6 @@
 scope: postgres
 namespace: /db/
-name: node1
+name: nodeN
 
 restapi:
     listen: <nodeN_ip>:8008
