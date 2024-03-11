@@ -41,7 +41,8 @@ Before you begin, make sure you have the following prerequisites in place:
 5. Configure Patroni on node1,node2 and node3
 
   Modify file with this path "/etc/patroni.yaml" and add lines in the patroni.yaml file of this repository
-  Node: Update corresponding IP address for each nodes
+  
+  Note: Update corresponding IP address for each nodes
 
   Initial data folder for each node:
 ```
@@ -59,6 +60,7 @@ sudo systemctl start patroni
 7. Configure haproxy
 
 Modify file with this path "/etc/haproxy/haproxy.cfg" and replace lines with the lines in the file haproxy.cfg of this repository
+
 Note: Update corresponding IP address for each nodes
 
 8. Start haproxy service
