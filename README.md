@@ -11,11 +11,10 @@ This guide provides step-by-step instructions for deploying a High Availability 
 
 Before you begin, make sure you have the following prerequisites in place:
 
-- A cluster of servers or virtual machines to host the PostgreSQL instances. We would have 3 nodes of PostgreSQL instances that run on Ubuntu oepration system.
-- A load balancer or proxy server to distribute client connections across the PostgreSQL instances. We would have a node to host a haproxy for routing traffics to PostgreSQL instances
+- A cluster of servers or virtual machines to host the PostgreSQL instances. We would have 3 nodes of PostgreSQL instances that run on Ubuntu operation system.
+- A load balancer or proxy server to distribute client connections across the PostgreSQL instances. We would have a node to host a haproxy for routing traffics to PostgreSQL instances.
 - A etcd server. We would have a node to host a etcd server.
 - Basic knowledge of PostgreSQL administration and Linux system administration.
-
 ## Installation
 
 1. Setup node1, node2 and node3
