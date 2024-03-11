@@ -71,6 +71,18 @@ Note: Update corresponding IP address for each nodes
 ```
 sudo systemctl start haproxy
 ```
+
+Connect haproxy dashboard
+```
+http://<haproxynode_ip>:7000/
+```
+
+9. Connect Postgresql client.
+
+```
+psql -h <haproxynode_ip> -p 5000 -U postgres
+```
+
 ## Troubleshooting
 
 If you encounter any issues during the deployment or operation of the HA PostgreSQL cluster, refer to the following resources for troubleshooting:
