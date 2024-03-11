@@ -37,6 +37,11 @@ Before you begin, make sure you have the following prerequisites in place:
 
   Modify file with this path "/etc/default/etcd" and add add lines in the etcd-configure file of this repository.
 
+  Restart etcd service
+  ```
+  sudo systemctl restart etcd
+  ```
+
 5. Configure Patroni on node1,node2 and node3
 
   Modify file with this path "/etc/patroni.yaml" and add lines in the patroni.yaml file of this repository
