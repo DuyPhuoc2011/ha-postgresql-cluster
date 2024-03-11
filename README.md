@@ -57,7 +57,7 @@ sudo chmod 700 /data/patroni
 Create new service file for patroni with this path "/etc/systemd/system/patroni.service"
 Add lines in the patroni.service file of this repository
 
-6. Start patroni service
+6. Start patroni service on each nodes
 ```
 sudo systemctl start patroni
 ```
